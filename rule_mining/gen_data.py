@@ -6,7 +6,7 @@ from r_from_python import scci_given_data
 
 
 def run_query(q, return_list=True):
-    graph = Graph("http://localhost:7474", auth=("neo4j", "qwer1234"))
+    graph = Graph("http://localhost:7474", auth=("neo4j", "pwd"))
     res = graph.query(q)
     tmp_set = set()
     tmp_list = []

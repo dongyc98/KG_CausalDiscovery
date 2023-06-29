@@ -16,7 +16,7 @@ def filter_wish(all_paths):
 
 
 def filter_paths_num(all_paths, dataset, k=1000, large_size=1e5):
-    graph = Graph("http://localhost:7474", auth=("neo4j", "qwer1234"))
+    graph = Graph("http://localhost:7474", auth=("neo4j", "pwd"))
     l = []
     large = []
     for p in all_paths:

@@ -202,7 +202,7 @@ def load_entity(name, build_data_path):
     return entities
 
 def build_entity(name, en_name, build_data_path):
-    graph = Graph("http://localhost:7474", auth=("neo4j", "qwer1234"))
+    graph = Graph("http://localhost:7474", auth=("neo4j", "pwd"))
     entities = load_entity(name, build_data_path)
     count = 0
     for e in entities:
@@ -268,7 +268,7 @@ def build_data(build_data_path = "./douban_sample/", dataset = './ori_dataset/')
 
 
 def import_comment(build_data_path):
-    graph = Graph("http://localhost:7474", auth=("neo4j", "qwer1234"))
+    graph = Graph("http://localhost:7474", auth=("neo4j", "pwd"))
     comments = pd.read_csv(os.path.join(build_data_path, 'comments.csv'))
     count = 0
     for idx, row in comments.iterrows():
@@ -290,7 +290,7 @@ def import_comment(build_data_path):
     return count
 
 def import_person2movie(build_data_path):
-    graph = Graph("http://localhost:7474", auth=("neo4j", "qwer1234"))
+    graph = Graph("http://localhost:7474", auth=("neo4j", "pwd"))
     p2m = pd.read_csv(os.path.join(build_data_path, 'person2movie.csv'))
     count = 0
     for idx, row in p2m.iterrows():
@@ -311,7 +311,7 @@ def import_person2movie(build_data_path):
     return count
 
 def import_companies2movie(build_data_path):
-    graph = Graph("http://localhost:7474", auth=("neo4j", "qwer1234"))
+    graph = Graph("http://localhost:7474", auth=("neo4j", "pwd"))
     c2m = pd.read_csv(os.path.join(build_data_path, 'companies2movie.csv'))
     count = 0
     for idx, row in c2m.iterrows():
@@ -333,7 +333,7 @@ def import_companies2movie(build_data_path):
 
 
 def import_movie2keywords(build_data_path):
-    graph = Graph("http://localhost:7474", auth=("neo4j", "qwer1234"))
+    graph = Graph("http://localhost:7474", auth=("neo4j", "pwd"))
     m2k = pd.read_csv(os.path.join(build_data_path, 'movie2keywords.csv'))
     count = 0
     for idx, row in m2k.iterrows():
@@ -354,7 +354,7 @@ def import_movie2keywords(build_data_path):
     return count
 
 def import_movie2parentalGuide(build_data_path):
-    graph = Graph("http://localhost:7474", auth=("neo4j", "qwer1234"))
+    graph = Graph("http://localhost:7474", auth=("neo4j", "pwd"))
     m2pG = pd.read_csv(os.path.join(build_data_path, 'movie2parentalGuide.csv'))
     count = 0
     for idx, row in m2pG.iterrows():
@@ -375,7 +375,7 @@ def import_movie2parentalGuide(build_data_path):
     return count
 
 def import_user2person(build_data_path):
-    graph = Graph("http://localhost:7474", auth=("neo4j", "qwer1234"))
+    graph = Graph("http://localhost:7474", auth=("neo4j", "pwd"))
     u2p = pd.read_csv(os.path.join(build_data_path, 'user2person.csv'))
     count = 0
     for idx, row in u2p.iterrows():
@@ -397,7 +397,7 @@ def import_user2person(build_data_path):
 
 
 def import_movie_info(build_data_path):
-    graph = Graph("http://localhost:7474", auth=("neo4j", "qwer1234"))
+    graph = Graph("http://localhost:7474", auth=("neo4j", "pwd"))
     mi = pd.read_csv(os.path.join(build_data_path, 'movieinfo.csv'))
     count = 0
     for idx, row in mi.iterrows():
@@ -421,7 +421,7 @@ def import_movie_info(build_data_path):
 
 
 def import_movie_info2(build_data_path):
-    graph = Graph("http://localhost:7474", auth=("neo4j", "qwer1234"))
+    graph = Graph("http://localhost:7474", auth=("neo4j", "pwd"))
     mi2 = pd.read_csv(os.path.join(build_data_path, 'movieinfo2.csv'))
     count = 0
     for idx, row in mi2.iterrows():

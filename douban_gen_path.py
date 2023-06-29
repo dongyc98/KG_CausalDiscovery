@@ -23,7 +23,7 @@ def extract_path(num, df: DataFrame):
     :param df:
     :return:
     '''
-    graph = Graph("http://localhost:7474", auth=("neo4j", "qwer1234"))
+    graph = Graph("http://localhost:7474", auth=("neo4j", "pwd"))
     count = 0
     with open('./douban_sample/collect01/paths' + str(num) + ".txt", 'w+') as fw:
         for idx, row in df.iterrows():

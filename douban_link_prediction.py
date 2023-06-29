@@ -3,7 +3,7 @@ from py2neo import Graph
 
 
 def link_prediction(user, vote, movie, P1_count, E_train_p1, P2_count, E_train_p2_0, E_train_p2_1):
-    graph = Graph("http://localhost:7474", auth=("neo4j", "qwer1234"))
+    graph = Graph("http://localhost:7474", auth=("neo4j", "pwd"))
 
     p1 = "fan_director"
     p2 = "collect_genres_invgenres"
@@ -61,7 +61,7 @@ def pre_train():
     get the constant variable in training kg
     :return:
     '''
-    graph = Graph("http://localhost:7474", auth=("neo4j", "qwer1234"))
+    graph = Graph("http://localhost:7474", auth=("neo4j", "pwd"))
     query_p1 = "match (n1:User), (n2:Movie), (n3:Person), " \
                "(n1)-[:fan]->(n3)-[:director]->(n2)," \
                "(n1)-[r:collect]->(n2) " \
